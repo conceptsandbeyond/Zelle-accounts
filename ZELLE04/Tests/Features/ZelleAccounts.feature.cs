@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ZELLE00.Tests.Features
+namespace ZELLE04.Tests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,24 @@ namespace ZELLE00.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ATM Operations")]
-    public partial class ATMOperationsFeature
+    [NUnit.Framework.DescriptionAttribute("Retrieve Zelle accounts based on account type and eligibility")]
+    public partial class RetrieveZelleAccountsBasedOnAccountTypeAndEligibilityFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ATMOperations.feature"
+#line 1 "ZelleAccounts.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Tests/Features", "ATM Operations", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Tests/Features", "Retrieve Zelle accounts based on account type and eligibility", "  As a user with different account types\r\n  I want to retrieve a list of eligible" +
+                    " Zelle accounts\r\n  So that I can see the correct options based on my account typ" +
+                    "e and eligibility", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,56 +76,20 @@ namespace ZELLE00.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Withdraw cash successfully")]
-        public virtual void WithdrawCashSuccessfully()
+        [NUnit.Framework.DescriptionAttribute("Retrieve Zelle accounts based on account type and boolean list")]
+        [NUnit.Framework.TestCaseAttribute("Retail", "F", "Retail Zelle", null)]
+        [NUnit.Framework.TestCaseAttribute("No accounts/not eligible", "F", "False", null)]
+        [NUnit.Framework.TestCaseAttribute("Business", "F", "Business Zelle", null)]
+        [NUnit.Framework.TestCaseAttribute("Mixed Retail/Business", "T", "Based on user choice", null)]
+        public virtual void RetrieveZelleAccountsBasedOnAccountTypeAndBooleanList(string account_Type, string boolean_List, string list_Of_Accounts, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Withdraw cash successfully", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 3
-  this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-    testRunner.Given("the account balance is $1000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 5
-    testRunner.When("the user requests to withdraw $200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
+            argumentsOfScenario.Add("account_type", account_Type);
+            argumentsOfScenario.Add("boolean_list", boolean_List);
+            argumentsOfScenario.Add("list_of_accounts", list_Of_Accounts);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Retrieve Zelle accounts based on account type and boolean list", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
-    testRunner.Then("the ATM should dispense $200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 7
-    testRunner.And("the account balance should be $800", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Withdraw cash with insufficient funds")]
-        public virtual void WithdrawCashWithInsufficientFunds()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Withdraw cash with insufficient funds", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -143,17 +109,14 @@ namespace ZELLE00.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 10
-    testRunner.Given("the account balance is $100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+    testRunner.Given(string.Format("I am a {0} user", account_Type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
-    testRunner.When("the user requests to withdraw $200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+    testRunner.When(string.Format("I retrieve Zelle eligibility status {0}", boolean_List), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 12
-    testRunner.Then("the ATM should display an insufficient funds message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 13
-    testRunner.And("the account balance should remain $100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+    testRunner.Then(string.Format("I get {0}", list_Of_Accounts), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

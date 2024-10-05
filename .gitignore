@@ -1,0 +1,205 @@
+# ============================
+# Ignore Visual Studio files
+# ============================
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# =====================================
+# Ignore Build Results and Artifacts
+# =====================================
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# ==============================
+# Ignore Visual Studio Cache
+# ==============================
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Rider IDE files
+.idea/
+*.sln.iml
+
+# ==========================================
+# Ignore Test Results and Coverage Reports
+# ==========================================
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# ====================================
+# Ignore NuGet Packages and Dependencies
+# ====================================
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it should be included
+#!**/packages/repositories.config
+
+# NuGet v3's project file cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# =================================
+# Ignore SpecFlow Generated Files
+# =================================
+
+# SpecFlow generates these files; include them only if you want to share step definitions
+# Otherwise, it's better to include step definition source files and exclude generated code
+# *.feature.cs
+
+# If you decide to exclude them, uncomment the line below
+# *.feature.cs
+
+# ================================
+# Ignore Other Common Generated Files
+# ================================
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.ipch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlh
+*.tli
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*_i.asm
+*_p.asm
+*.cachefile
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# SQLite
+*.sqlite
+*.sqlite3
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.BLOB
+*.db
+*.sdf
+*.cache
+*.mdb
+*.opendb
+*.DS_Store
+
+# ====================
+# Ignore Configuration
+# ====================
+
+# Configuration files (exclude if they contain sensitive data)
+# Uncomment the following lines if you have sensitive configuration files
+# Config/appsettings.json
+# Config/appsettings.Development.json
+# Config/appsettings.Production.json
+
+# ====================
+# Ignore Logs and Databases
+# ====================
+
+# Log files
+*.log
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# =====================================
+# Ignore Files Related to Testing Tools
+# =====================================
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# ====================
+# Ignore Temporary Files
+# ====================
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ====================
+# Ignore Others
+# ====================
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ==================================
+# End of .gitignore for C# Project
+# ==================================
